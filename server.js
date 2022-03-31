@@ -17,6 +17,11 @@ const jsonParser = express.json();
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
 
+//обслуживание html
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 //получение пользовательского теста
 app.post("/person-test", jsonParser, function(request, response) {
     console.log(request.body);
@@ -35,6 +40,8 @@ app.post("/person-test", jsonParser, function(request, response) {
     console.log(options);
     console.log(decoration);
     console.log(questions);
+
+    response.end('It worked!');
 });
 
 

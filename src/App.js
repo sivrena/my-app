@@ -403,7 +403,7 @@ const App = (props) => {
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(test);
     
-    console.log(test);
+    //console.log(test);
   }
 
 
