@@ -579,24 +579,22 @@ const App = (props) => {
 
                 <FormItem 
                 top="Описание теста"
-                value={decoration.description}
-                
                 >
                   <Textarea 
                   placeholder="В психологии «большая пятёрка» — ..." 
                   name="description"
+                  value={decoration.description}
                   onChange={(e) => setDecoration({...decoration, [e.target.name]: e.target.value})}
                   />
                 </FormItem>
 
                 <FormItem 
-                top="Инструкция к тесту с markdown разметкой"
-                value={decoration.instruction}
-                
+                top="Инструкция к тесту с markdown разметкой"                
                 >
                   <Textarea 
                   placeholder="Вам нужно будет *прочесть* парные высказывания..." 
                   name="instruction"
+                  value={decoration.instruction}
                   onChange={(e) => setDecoration({...decoration, [e.target.name]: e.target.value})}
                   />
                 </FormItem>
